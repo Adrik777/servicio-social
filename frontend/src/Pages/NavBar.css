@@ -1,0 +1,54 @@
+/* Estilo general del NavBar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Hace que el navbar se mantenga fijo */
+    top: 0; /* Asegura que esté en la parte superior de la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Logo y texto */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.nav-logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 0.5rem;
+}
+
+.nav-logo-text {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #9d1d7c; /* Color similar al fucsia */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+/* Links de navegación */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item, .nav-signin {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000; /* Gris oscuro */
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #c6259e; /* Color más oscuro en hover */
+}
+
+.nav-signin:hover {
+    color: #f8bd3f;
+}

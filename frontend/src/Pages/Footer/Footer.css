@@ -1,0 +1,119 @@
+/* Estilos Generales */
+.footer {
+    background-color: #ffffff;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-logo-image {
+    height: 40px;
+    width: 40px;
+    margin-right: 0.75rem;
+}
+
+.footer-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #9d1d7c; /* Fuchsia color */
+}
+
+.footer-sections {
+    display: flex;
+    gap: 3rem; /* Aumenta el espacio horizontal entre secciones */
+    margin-left: auto; /* Mueve las secciones a la derecha */
+}
+
+.footer-section {
+    min-width: 120px; /* Define un ancho mínimo para cada sección */
+}
+
+.footer-section-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1f2937; /* Dark gray */
+    margin-bottom: 1rem;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    color: #4b5563; /* Gray */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #c6259e; /* Fuchsia color on hover */
+}
+
+.footer-divider {
+    border: 1px solid #e5e7eb;
+    margin: 1.5rem 0;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.footer-bottom-text {
+    font-size: 0.875rem;
+    color: #6b7280; /* Light gray */
+}
+
+.footer-bottom-link {
+    color: #9d1d7c; /* Fuchsia color */
+    text-decoration: none;
+}
+
+
+.footer-social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-link {
+    font-size: 1.2rem;
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    color: #1f2937; /* Dark gray on hover */
+}

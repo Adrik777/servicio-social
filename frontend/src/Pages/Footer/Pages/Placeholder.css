@@ -1,0 +1,46 @@
+/* Estilos del contenedor */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Título principal */
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111827; /* Gris oscuro */
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #111827;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Párrafos */
+.paragraph {
+    font-size: 1rem;
+    color: #4b5563; /* Gris para el texto */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Lista */
+.list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.list li {
+    margin-bottom: 0.5rem;
+}

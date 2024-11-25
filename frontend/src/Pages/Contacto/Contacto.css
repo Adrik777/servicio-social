@@ -1,0 +1,35 @@
+.section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section .info{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100vh;
+}   
+.contenedorLogo{
+    text-align: center;
+}
+.contenedorLogo .imagen{
+    width: 15vw;
+    height: auto;
+}
+.info h1 {
+    font-size: 2rem; 
+    font-weight: bold; 
+    text-align: center; 
+}
+.info p {
+    font-size: 1rem; 
+    
+    text-align: center; 
+}
+.section .video{
+    width: 50vw; /* Ensures the player fills the container */
+    height: auto; /* Adjusts the height automatically to maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* Ensures the video keeps a 16:9 aspect ratio */
+}
