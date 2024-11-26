@@ -1,54 +1,146 @@
-/* Estilo general del NavBar */
+/* General Navbar Styles */
 .navbar {
     display: flex;
+    justify-content: space-around; /* Espacio uniforme alrededor */
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Hace que el navbar se mantenga fijo */
-    top: 0; /* Asegura que esté en la parte superior de la pantalla */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100vw;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
 }
 
-/* Logo y texto */
+/* Logo */
 .nav-logo {
     display: flex;
     align-items: center;
-    text-decoration: none; /* Quitar subrayado */
+    text-decoration: none;
+    color: #000;
 }
 
 .nav-logo img {
-    width: 60px;
-    height: 60px;
+    height: 40px;
     margin-right: 0.5rem;
 }
 
 .nav-logo-text {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    min-width: 1rem;
     font-weight: bold;
-    color: #9d1d7c; /* Color similar al fucsia */
-    text-decoration: none; /* Quitar subrayado */
+    color: #a826b9;
 }
 
-/* Links de navegación */
+/* Navigation Links */
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2rem; /* Espacio entre enlaces */
 }
 
-.nav-item, .nav-signin {
+.nav-item {
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #000000; /* Gris oscuro */
-    transition: color 0.3s;
+    color: #000;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-item:hover {
-    color: #c6259e; /* Color más oscuro en hover */
+    color: #a826b9d3;;
+}
+
+/* Sign In Button */
+.nav-signin {
+    color: black;
+    text-decoration: none;
+    top: 15px;
+    right: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    min-width: 2rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-signin:hover {
-    color: #f8bd3f;
+    background-color: #a826b9d3;
+    color: #ffffff;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+
+    margin-right: 2rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    transition: transform 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    /* Show hamburger button */
+    .nav-bar {
+        display: flex;
+        
+    }
+    .hamburger {
+        display: flex;
+        right: 10px; /* Mover el botón hamburguesa a la derecha */
+        top: 15px; /* Asegura un alineamiento vertical adecuado */
+        z-index: 10;
+        order: 3;
+    }
+
+    /* Hide links initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        z-index: 5;
+    }
+
+    /* Show links when menu is open */
+    .nav-links.open {
+        display: flex;
+        order: 1;
+    }
+
+    /* Ajuste de enlaces */
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Mantener Sign In siempre visible */
+
+    .nav-logo {
+        margin-left: 5px; /* Mueve todo el logo ligeramente a la izquierda */
+    }
+
+    .nav-logo img {
+        width: 50px; /* Cambia el ancho del logo */
+        height: auto; /* Mantiene la proporción del logo */
+        margin-left: 0; /* Asegúrate de que la imagen esté alineada dentro del contenedor */
+    }
+
+    .nav-logo-text {
+        font-size: 1.2rem; /* Reduce el tamaño del texto si es necesario */
+    }
 }

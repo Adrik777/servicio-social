@@ -6,7 +6,7 @@ import './HomePage.css';
 const Hero = () => {
     return (
       <>
-        <header className="hero">
+        <div className="hero">
           <div className="hero-content">
             <h1>Membresía Holística</h1>
             <p>Desarrolla al máximo tu potencial</p>
@@ -21,7 +21,7 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-        </header>
+        </div>
       </>
     );
   };
