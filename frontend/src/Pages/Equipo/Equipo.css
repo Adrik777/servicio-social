@@ -1,0 +1,57 @@
+#equipo{
+    background-color: #00000003;
+    padding-top: 5rem;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#equipo #personas{
+    width: 65vw;
+    
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5%;
+    align-content: flex-end;
+}
+#personas .card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 20px;
+    width: 7vw; /* O ajusta a px si prefieres */
+    align-items: center;
+    justify-content: space-around; /* Distribuye uniformemente los elementos */
+    margin-bottom: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    text-align: center;
+    height: auto; /* Altura fija para uniformidad */
+}
+
+#personas p {
+    width: 12vw;
+    margin-top: -10px;
+    font-size: small;
+    text-align: inherit;
+    color: gray; /* Cambia el color del texto */
+}
+
+#personas .card img {
+    width: 120px; /* Ancho fijo de la imagen */
+    height: 120px; /* Alto fijo de la imagen */
+}
+
+
+
+
+
+
