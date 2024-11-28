@@ -86,59 +86,38 @@
 
 @media (max-width: 800px) {
     .hero {
-        padding: 1rem;
-        height: 70vh; /* Reduce la altura para pantallas pequeñas */
+        height: 56vh;
+        width: 100vw; /* Mantén la anchura completa */
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centrar horizontalmente */
     }
 
     .hero-content {
-        max-width: 90%;
-        margin-bottom: 5rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .hero-button {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 800px) {
-    .hero {
-        height: 60vh;
-        width: 90vw; /* Altura más pequeña para dispositivos móviles */
-        display: flex;
-    }
-    .hero-buttons{
-        display: flex;
-    }
-    
-
-    .hero-content {
-        max-width: 100%;
+        max-width: 90%; /* Ajusta ligeramente el ancho para mayor legibilidad */
         padding: 1rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem; /* Reduce el margen inferior */
+        margin-top: -5rem; /* Mueve el contenido hacia arriba */
     }
-    .hero-buttons{
-        display: flex;
-    }
+
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Texto más pequeño para dispositivos móviles */
+        margin-bottom: 2rem; /* Reduce el espacio inferior del título */
     }
 
     .hero-content p {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+        margin-bottom: 1rem; /* Reduce el espacio entre párrafo y botones */
     }
 
     .hero-button {
-        
-        padding: 0.5rem 0.75rem;
-        font-size: 0.1em;
+        padding: 0.5rem 1rem; /* Botones más pequeños */
+        font-size: 0.9rem; /* Texto del botón reducido */
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 0.5rem; /* Agrega espacio entre los botones */
     }
 }
+

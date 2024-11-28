@@ -1,0 +1,99 @@
+#membresia{
+    background-color: #F9F5FE;
+    width: 100vw;
+    height: auto;
+    padding-top: 6rem;
+    padding-bottom: 7%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#membresia > h1{
+    color: black;
+    text-align: center;
+    width: 45%;
+}
+#membresia > p{
+    color: gray;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 2rem;
+}
+
+#planes{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+#planes .card{
+    border: 1.5px #a826b924 solid;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    height: auto;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#planes .card > p{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 5px;
+    color: gray;
+}
+#planes .card > button{
+    margin-bottom: 1rem;
+    margin-top: auto;
+    padding: 0.6rem;
+    border: 0px #a826b97d solid;
+    border-radius: 70px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.card ul{
+    list-style-image: url(../../../public/assets/check.png);
+    align-self: flex-start;
+    text-align: left;
+    margin-bottom: 1.7rem;
+}
+
+.card li{
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.precios h1{
+    font-size: 3rem;
+}
+.precios{
+    display: flex;
+    gap: 0.2rem;
+    margin-top: -2rem;
+    margin-bottom: -2.5rem;
+}
+.precios p{
+    align-self: center;
+}
+
+@media (max-width: 1200px) {
+    #planes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap : 2rem
+    }
+    #planes .card {
+        width: 75%;
+    }
+    #membresia > h1{
+        color: black;
+        text-align: center;
+        font-size: 140%;
+    }
+    
+
+}

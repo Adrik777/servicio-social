@@ -5,53 +5,57 @@
     height: auto;
     padding-bottom: 4rem;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+#equipo >p {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+#equipo >h1 {
     text-align: center;
 }
 
-#equipo #personas{
-    width: 65vw;
-    
+#personas{
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 5%;
-    align-content: flex-end;
-}
-#personas .card {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    border-radius: 20px;
-    width: 7vw; /* O ajusta a px si prefieres */
-    align-items: center;
-    justify-content: space-around; /* Distribuye uniformemente los elementos */
-    margin-bottom: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 3%;
-    padding-bottom: 2%;
+    gap: 2rem;
+    width: 80vw;
+    padding-left: 10%;
     text-align: center;
-    height: auto; /* Altura fija para uniformidad */
+}
+#personas .card{
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 1rem;
+    width: 13vw;
+    min-width: 250px;
+
 }
 
-#personas p {
-    width: 12vw;
-    margin-top: -10px;
-    font-size: small;
-    text-align: inherit;
-    color: gray; /* Cambia el color del texto */
+#equipo .card img{
+    width: 120px;
+    height: auto;
+}  
+
+@media (max-width: 800px) {
+    #personas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap : 2rem;
+        padding-left: 0px;
+    }
+    #personas .card {
+        width: 75%;
+    }
+    #membresia > h1{
+        color: black;
+        text-align: center;
+        font-size: 140%;
+    }
+    
+
 }
-
-#personas .card img {
-    width: 120px; /* Ancho fijo de la imagen */
-    height: 120px; /* Alto fijo de la imagen */
-}
-
-
-
-
 
 

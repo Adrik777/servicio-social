@@ -1,10 +1,12 @@
 .nosotros {
     margin: 1rem;
-    padding: 4%;
+    padding-top: 7rem;
     display: flex;
     justify-content: center;
-    gap: 5%;
-    
+    gap: 5%; 
+}
+.nosotros h1{
+    text-align: center;
 }
 .video{
     flex: 0.65;
@@ -20,10 +22,12 @@
     .nosotros {
         flex-direction: column; /* Coloca los elementos uno encima del otro */
         align-items: center; /* Centra los elementos */
-        margin: 4%;
-        padding: 4%;
+        margin: 5%;
+        padding-top: 3rem;
+        padding-left: 0.5rem;        
+        padding-right: 0.5rem;        
     }
-
+    
     .test, .video {
         flex: 1 1 100%; /* Ambos elementos ocupan todo el ancho */
         max-width: 100%; /* Evita que excedan el ancho del contenedor */

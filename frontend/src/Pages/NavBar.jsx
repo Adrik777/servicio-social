@@ -1,5 +1,5 @@
-import { useState } from "react"; // Hook para manejar el estado del menú
-import { Routes, Route, Link } from "react-router-dom";
+import { useState, useEffect } from "react"; // Hooks para manejar el estado del menú y scroll
+import { Routes, Route, Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 
 import Beca from "./Beca/Beca";
@@ -10,6 +10,17 @@ import HomePage from "./HomePage/HomePage";
 import Membresia from "./Membresia/Membresia";
 import Privacidad from "./Footer/Pages/Privacidad";
 import Condiciones from "./Footer/Pages/Condiciones";
+
+// Componente para reiniciar el scroll al cambiar de ruta
+const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Desplaza el scroll a la parte superior
+    }, [pathname]);
+
+    return null;
+};
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // Estado del menú
@@ -22,6 +33,10 @@ export default function NavBar() {
         setIsMenuOpen(false); // Cierra el menú al seleccionar una opción
     };
 
+    const handleScrollToTop = () => {
+        window.scrollTo(0, 0); // Asegura que el scroll vaya al inicio incluso en la misma página
+    };
+
     return (
         <div>
             <nav className="navbar">
@@ -30,8 +45,6 @@ export default function NavBar() {
                     <img src="/assets/cilcaLogo.png" alt="CILCA Logo" />
                     <span className="nav-logo-text">CILCA</span>
                 </Link>
-
-                {/* Botón Sign In (siempre visible) */}
 
                 {/* Botón hamburguesa */}
                 <button className="hamburger" onClick={toggleMenu}>
@@ -42,19 +55,54 @@ export default function NavBar() {
 
                 {/* Menú de navegación */}
                 <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-                    <Link to="/cursos" className="nav-item" onClick={closeMenu}>
+                    <Link
+                        to="/cursos"
+                        className="nav-item"
+                        onClick={() => {
+                            closeMenu();
+                            handleScrollToTop();
+                        }}
+                    >
                         Cursos
                     </Link>
-                    <Link to="/membresia" className="nav-item" onClick={closeMenu}>
+                    <Link
+                        to="/membresia"
+                        className="nav-item"
+                        onClick={() => {
+                            closeMenu();
+                            handleScrollToTop();
+                        }}
+                    >
                         Membresía
                     </Link>
-                    <Link to="/equipo" className="nav-item" onClick={closeMenu}>
+                    <Link
+                        to="/equipo"
+                        className="nav-item"
+                        onClick={() => {
+                            closeMenu();
+                            handleScrollToTop();
+                        }}
+                    >
                         Equipo
                     </Link>
-                    <Link to="/beca" className="nav-item" onClick={closeMenu}>
+                    <Link
+                        to="/beca"
+                        className="nav-item"
+                        onClick={() => {
+                            closeMenu();
+                            handleScrollToTop();
+                        }}
+                    >
                         Beca un niño
                     </Link>
-                    <Link to="/contacto" className="nav-item" onClick={closeMenu}>
+                    <Link
+                        to="/contacto"
+                        className="nav-item"
+                        onClick={() => {
+                            closeMenu();
+                            handleScrollToTop();
+                        }}
+                    >
                         Contacto
                     </Link>
                 </div>
@@ -63,7 +111,8 @@ export default function NavBar() {
                 </Link>
             </nav>
 
-            {/* Rutas */}
+            {/* ScrollToTop y Rutas */}
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/cursos" element={<Cursos />} />

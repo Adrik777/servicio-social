@@ -1,7 +1,10 @@
 /* Estilos del contenedor */
 .container {
+    
+    
     max-width: 800px;
     margin: 2rem auto;
+    margin-top: 6rem;
     padding: 2rem;
     background-color: #ffffff;
     border-radius: 8px;
@@ -43,4 +46,10 @@
 
 .list li {
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .container{
+        margin-top: 30px;
+    }
 }
