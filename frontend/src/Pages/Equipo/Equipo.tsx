@@ -50,15 +50,17 @@ export default function Beca() {
     <div id="equipo">
       <h1>Nuestro Equipo</h1>
       <p>Conoce a los líderes de nuestra organización.</p>
-      <div id="personas">
-        {teamData.map((person, index) => (
-          <div key={index} className="card">
-            <img src={person.image} alt={`${person.name}'s profile`} />
-            <h3>{person.name}</h3>
-            <p>{person.role}</p>
-            <p>{person.bio}</p>
-          </div>
-        ))}
+      <div id="personas-helper">
+        <div id="personas">
+          {teamData.map((person, index) => (
+            <div key={index} className="card">
+              <img src={person.image} alt={`${person.name}'s profile`} />
+              <h3>{person.name}</h3>
+              <p>{person.role}</p>
+              <p>{person.bio}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -4,12 +4,13 @@ import "./NavBar.css";
 
 import Beca from "./Beca/Beca";
 import Contacto from "./Contacto/Contacto";
-import Cursos from "./Cursos/Cursos";
 import Equipo from "./Equipo/Equipo";
 import HomePage from "./HomePage/HomePage";
 import Membresia from "./Membresia/Membresia";
 import Privacidad from "./Footer/Pages/Privacidad";
 import Condiciones from "./Footer/Pages/Condiciones";
+import Cursos from "./Cursos/Cursos";
+import CursoId from "./Cursos/Pages/CursoId";
 
 // Componente para reiniciar el scroll al cambiar de ruta
 const ScrollToTop = () => {
@@ -115,13 +116,14 @@ export default function NavBar() {
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/cursos" element={<Cursos />} />
                 <Route path="/membresia" element={<Membresia />} />
                 <Route path="/equipo" element={<Equipo />} />
                 <Route path="/beca" element={<Beca />} />
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path="/privacy-policy" element={<Privacidad />} />
                 <Route path="/terms" element={<Condiciones />} />
+                <Route path="/cursos" element={<Cursos />} />
+                <Route path="/cursos/:id" element={<CursoId/>}/>
             </Routes>
         </div>
     );

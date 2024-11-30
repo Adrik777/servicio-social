@@ -1,0 +1,87 @@
+#curso-id {
+    padding-top: 9rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    gap: 2rem
+}
+
+#curso-id .informacion{
+    margin-top: -1.5rem;
+    width: 25vw;
+    min-width: 350px;
+    max-width: 700px;
+}
+#curso-id .informacion .botones{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem
+    
+}
+#curso-id .comprar{
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    border: 1px rgba(0, 0, 0, 0.545) solid;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    
+}
+#curso-id .comprar:hover{
+    background-color: rgba(0, 0, 0, 0.831);
+}
+#curso-id .carrito{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px rgba(0, 0, 0, 0.545) solid;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+#curso-id .carrito:hover{
+    
+    border: 1px #a826b9b1 solid; 
+}
+
+#hr-curso-id {
+    margin-bottom: 1rem; /* Espaciado inferior */
+    margin-top: 1.5rem;  /* Espaciado superior */
+    border: none;        /* Elimina el borde predeterminado */
+    height: 0.5px;         /* Grosor de la línea */
+    background-color: rgba(0, 0, 0, 0.317); /* Color rojo */
+}
+#curso-id .profesor-cursoid{
+    font-size: small;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.743);
+    text-decoration: underline;
+}
+#curso-id .descripcion-cursoid{
+    font-size: small;
+    margin-top: -0.4rem;
+    color: rgba(0, 0, 0, 0.79);
+    margin-bottom: 2rem;
+    
+}
+
+@media (max-width: 768px) {
+    #curso-id {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3rem;
+        margin-top: -2rem;
+    }
+    #curso-id-trailer {
+        max-width: 350px; /* Ancho máximo para pantallas pequeñas */
+    }
+    
+}
