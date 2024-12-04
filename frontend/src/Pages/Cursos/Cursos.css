@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: center;
     padding-right: 1rem;
-    
 }
 
 #cursos .helper{
@@ -28,6 +27,9 @@
     border: 1px #00000028 solid;
     border-radius: 35px;
     padding: 0.5rem;
+}
+#cursos .botones #active{
+    background-color: #a826b919;
 }
 #cursos .botones button:hover{
     border: 1px #a826b9b1 solid;   
@@ -55,6 +57,7 @@
 }
 #cursos .card img {
     height: 20vh;
+    min-height: 7rem;
     border-top-right-radius: 10px; /* Aplica el mismo borde redondeado a la imagen */
     border-top-left-radius: 10px; /* Aplica el mismo borde redondeado a la imagen */
     object-fit: cover; /* Ajusta la imagen para que no se deforme */
@@ -100,9 +103,10 @@
     text-decoration: underline; /* Subrayado al hacer hover */
 }
 #card-info .categoria {
-    font-size: small;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
     color: black;
+    background-color: rgba(0, 0, 0, 0.033);
     border: 1px rgba(0, 0, 0, 0.214) solid;
     
     padding: 0.2rem;

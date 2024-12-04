@@ -1,32 +1,52 @@
 import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
 import ReactPlayer from 'react-player'
 import "./CursoId.css"
+import { Interface } from "readline"
 
-export default function CursoId() {
-    const { id } = useParams()
+export default function CursoId() {    
     
-    const json = {
-        nombre: "matematicas",
-        precio: 100.01,
-        profesor: "cilca",
-        descripcion: "Curso de Yoga",
-        url_Trailer: "https://www.youtube.com/watch?v=IJVQJP9Y-_4"
+    const { id } = useParams()
+
+    interface CursoId {
+        id: number;
+        name: string;
+        description: string;
+        instructor: string;
+        price: number;
+        urlTrailer: string;
     }
+    const [cursoId, setCursoId] = useState<CursoId | null>()
+
+    useEffect(()=>{
+        async function getCursoId(id:string|undefined) {
+            try {
+                const response = await fetch(`http://localhost:3002/cursos/${id}`)
+                const data = await response.json()
+                setCursoId(data)
+                console.log(cursoId)
+            }catch (e) {
+                console.log("There was an error", e)
+            }
+        }
+        getCursoId(id)
+    },[id])
+
     
     return(
         <div id="curso-id">
                 <ReactPlayer
                     id = "curso-id-trailer"
-                    url={json.url_Trailer}
+                    url={cursoId?.urlTrailer}
                     controls
                     playing={true}
                     muted={true}
-                    
                 />
             <div className="informacion">
-                <h2>{json.nombre}</h2>
-                <p className="descripcion-cursoid">{json.descripcion}</p>
-                <p className="profesor-cursoid">{json.profesor}</p>
+                <h1>{cursoId?.name}</h1>
+                <h1 className="price-cursoid">${cursoId?.price}</h1>
+                <p className="descripcion-cursoid">{cursoId?.description}</p>
+                <p className="profesor-cursoid">{cursoId?.instructor}</p>
                 <hr id="hr-curso-id"/>
                 <div className="botones">
                     <button className="comprar">
@@ -40,11 +60,9 @@ export default function CursoId() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
                         </svg>
                         <p>Add to cart</p>
-                    </button>
-                    
+                    </button>  
                 </div>
             </div>
-            
         </div>
     )
 }

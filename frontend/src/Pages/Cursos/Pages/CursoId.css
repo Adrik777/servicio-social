@@ -8,6 +8,10 @@
     gap: 2rem
 }
 
+#curso-id .price-cursoid{
+    
+}
+
 #curso-id .informacion{
     margin-top: -1.5rem;
     width: 25vw;
@@ -52,12 +56,14 @@
 }
 
 #hr-curso-id {
-    margin-bottom: 1rem; /* Espaciado inferior */
-    margin-top: 1.5rem;  /* Espaciado superior */
-    border: none;        /* Elimina el borde predeterminado */
-    height: 0.5px;         /* Grosor de la línea */
-    background-color: rgba(0, 0, 0, 0.317); /* Color rojo */
+    margin-bottom: 1rem; 
+    margin-top: 1.5rem;  
+    border: 0;
+    height: 1px; /* Grosor más visible */
+    background-color: rgba(0, 0, 0, 0.373); /* Color de la línea */
+    margin-bottom: 2rem;
 }
+
 #curso-id .profesor-cursoid{
     font-size: small;
     font-weight: 600;

@@ -45,12 +45,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap;
         gap : 2rem;
         padding-left: 0px;
         margin-left: -6px;
+
     }
     #personas .card {
-        width: 75%;
+        width: 18rem;
     }
     #membresia > h1{
         color: black;
