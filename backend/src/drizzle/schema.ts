@@ -31,7 +31,7 @@ export const cursos = pgTable("cursos", {
   urlThumbnail: varchar("url_thumbnail", { length: 1024 }).notNull(),
   urlTrailer: varchar("url_trailer", { length: 1024 }).notNull(),
   description: varchar({ length: 255 }).notNull(),
-  categotyId: smallserial("category_id").notNull().references(() => cursoCategories.id),
+  categoryId: smallserial("category_id").notNull().references(() => cursoCategories.id),
   price: numeric({ precision: 10, scale: 2 }).notNull(),
   ...timestamps,
 });
